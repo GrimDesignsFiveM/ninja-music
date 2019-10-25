@@ -1,8 +1,8 @@
 {
-  "name": "Node.js Music Discord Bot",
+  "name": "Ninja Music",
   "description": "A discord Node.js music app",
-  "repository": "https://github.com/mrsmook/music-discord-heroku-bot",
-  "logo": "https://img.icons8.com/color/452/nodejs.png",
+  "repository": "https://github.com/GrimDesignsFiveM/ninja-music",
+  "logo": "https://cdn.discordapp.com/avatars/637130128018898974/1e73cc46a7d843556b6a49132417ce55.png?size=2048?size=1024",
   "keywords": ["node", "discord", "youtube"],
   "buildpacks": [
     {
