@@ -22,7 +22,7 @@
     },
     "PREFIX": {
       "description": "The prfix you want to use with the bot.",
-      "value": "!"
+      "value": "n/"
     }
   },
   "formation": {
