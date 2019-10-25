@@ -1,18 +1,16 @@
 {
-  "name": "Ninja Music",
-  "description": "A discord Node.js music app",
-  "repository": "https://github.com/GrimDesignsFiveM/ninja-music",
-  "logo": "https://cdn.discordapp.com/avatars/637130128018898974/1e73cc46a7d843556b6a49132417ce55.png?size=2048?size=1024",
-  "keywords": ["node", "discord", "youtube"],
-  "buildpacks": [
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    },
-    {
-      "url": "heroku/nodejs"
-    }
-
+  "name": "Ninja Starboard",
+  "description": "Basic Starboard Bot",
+  "keywords": [
+    "Node",
+    "Heroku",
+    "Discord",
+    "Youtube"
   ],
+  "website": "https://ninja-bot.webnode.com/",
+  "repository": "https://github.com/GrimDesignsFiveM/Ninja-Starboard-Bot",
+  "logo": "https://cdn.discordapp.com/avatars/636337796617076784/aed421d35f91ce91de1addfe7df4edb4.png?size=2048?size=1024",
+
   "env": {
     "BOT_TOKEN": {
       "description": "The token copied in the first section.",
@@ -26,5 +24,19 @@
       "description": "The prfix you want to use with the bot.",
       "value": "!"
     }
-  }  
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+	{
+		"url": "heroku/nodejs"
+	},
+        {
+                "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+  ]
 }
