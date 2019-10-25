@@ -22,17 +22,6 @@ bot.on("ready", function() {
     bot.user.setGame(`Listening To YouTube `, `https://www.twitch.tv/monstercat`);
     console.log(`${bot.user.username} is Ready!`);
 });
-
-//////////////////////////////***EVENT COLLECTION FUNCTION***////////////////////////////////////////////////
-//Allows the bot to log and show events (Joining New Servers)
-fs.readdir("./events/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    const event = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    client.on(eventName, event.bind(null, client));
-  });
-});
  
 client.commands = new Enmap();
 client.aliases = new Enmap();
