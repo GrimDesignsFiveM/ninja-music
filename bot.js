@@ -23,7 +23,7 @@ bot.on("ready", function() {
     console.log(`${bot.user.username} is Ready!`);
 });
 
-client.on("message", async message => {
+bot.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   
   // It's good practice to ignore other bots. This also makes your bot ignore itself
@@ -47,10 +47,11 @@ let helpBed = new Discord.RichEmbed()
     .setTitle("Not Yet")
     .setDescription("My help command is still being developed")
     message.delete().catch()
+    message.channel.send(helpBed);
 }
 
- 
- 
+});
+
 // Bot Login.
 // bot.login('YourAwesomeBotToken');
 bot.login(process.env.BOT_TOKEN);
