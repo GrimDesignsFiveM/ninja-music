@@ -7,7 +7,11 @@
   "buildpacks": [
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "heroku/nodejs"
     }
+
   ],
   "env": {
     "BOT_TOKEN": {
