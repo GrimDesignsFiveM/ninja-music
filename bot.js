@@ -23,27 +23,6 @@ bot.on("ready", function() {
     console.log(`${bot.user.username} is Ready!`);
 });
  
-client.commands = new Enmap();
-client.aliases = new Enmap();
- 
-//Stops the bot from responding to other bots.
-client.on('message', message => {
-  if(message.author.bot) return;
-})
- 
-//////////////////////////////***DEFINE COMMANDS FUNCTION***////////////////////////////////////////////////
-//This code line allows the commands to be individual/seperate files
-fs.readdir("./commands/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/${file}`);
-    let commandName = file.split(".")[0];
-    console.log(`Attempting to load command ${commandName}`);
-    client.commands.set(commandName, props);
-  });
-});
-
 // Bot Login.
 // bot.login('YourAwesomeBotToken');
 bot.login(process.env.BOT_TOKEN);
